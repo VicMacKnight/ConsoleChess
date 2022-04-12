@@ -1,4 +1,4 @@
-﻿namespace ConsoleChess.tabuleiro
+﻿namespace tabuleiro
 {
     public enum Cor
     {
