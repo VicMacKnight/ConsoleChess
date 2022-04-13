@@ -8,6 +8,7 @@ namespace ConsoleChess
         {
             for(int i = 0; i < tabuleiro.NumeroLinhas; i++)
             {
+                Console.Write(8 - i + " ");
                 for(int j = 0; j < tabuleiro.NumeroColunas; j++)
                 {
                     if(tabuleiro.peca(i,j) == null)
@@ -21,6 +22,7 @@ namespace ConsoleChess
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine("  a b c d e f g h");
         }
     }
 }
