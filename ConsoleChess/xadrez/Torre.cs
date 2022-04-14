@@ -1,6 +1,6 @@
 ﻿using tabuleiro;
 
-namespace ConsoleChess.xadrez
+namespace xadrez
 {
     public class Torre : Peca
     {

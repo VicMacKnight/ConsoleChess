@@ -1,6 +1,4 @@
-﻿using ConsoleChess.tabuleiro;
-
-namespace tabuleiro
+﻿namespace tabuleiro
 {
     public class Tabuleiro
     {

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleChess.xadrez
+﻿namespace xadrez
 {
-    internal class Bispo
+    public class Bispo
     {
     }
 }
