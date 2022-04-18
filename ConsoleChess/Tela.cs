@@ -3,9 +3,9 @@ using xadrez;
 
 namespace ConsoleChess
 {
-    public class Tela
+    class Tela
     {
-        public static void ImprimirTabuleiro(Tabuleiro tabuleiro)
+         static void ImprimirTabuleiro(Tabuleiro tabuleiro)
         {
             for(int i = 0; i < tabuleiro.NumeroLinhas; i++)
             {
@@ -36,7 +36,7 @@ namespace ConsoleChess
             return new PosicaoXadrez(coluna, linha);
         }
 
-        public static void imprimirPeca(Peca peca)
+        static void imprimirPeca(Peca peca)
         {
             if(peca.Cor == Cor.Branca)
             {
