@@ -56,10 +56,10 @@ namespace xadrez
             }
 
             Peca p = tab.peca(destino);
-            
+
             // #jogadaespecial en passant
 
-            if(p is Peao && (destino.Linha == origem.Linha -2 || destino.Linha == origem.Linha + 2))
+            if (p is Peao && (destino.Linha == origem.Linha - 2 || destino.Linha == origem.Linha + 2))
             {
                 vulneravelEnPassant = p;
             }
@@ -101,13 +101,13 @@ namespace xadrez
             }
 
             //#jogadaespecial en passant
-            if(p is Peao)
+            if (p is Peao)
             {
                 if (origem.Coluna != destino.Coluna && pecaCapturada == vulneravelEnPassant)
                 {
                     Peca peao = tab.retirarPeca(destino);
                     Posicao posP;
-                    if(p.Cor == Cor.Branca)
+                    if (p.Cor == Cor.Branca)
                     {
                         posP = new Posicao(3, destino.Coluna);
                     }
@@ -243,7 +243,7 @@ namespace xadrez
             }
 
             // #jogadaespecial roque pequeno
-            if(p is Rei && destino.Coluna == origem.Coluna + 2)
+            if (p is Rei && destino.Coluna == origem.Coluna + 2)
             {
                 Posicao origemDaTorre = new Posicao(origem.Linha, origem.Coluna + 3);
                 Posicao destinoDaTorre = new Posicao(origem.Linha, origem.Coluna + 1);
@@ -263,12 +263,12 @@ namespace xadrez
             }
 
             // #jogadaespecial en passant
-            if(p is Peao)
+            if (p is Peao)
             {
-                if(origem.Coluna != destino.Coluna && pecaCapturada == null)
+                if (origem.Coluna != destino.Coluna && pecaCapturada == null)
                 {
                     Posicao posP;
-                    if(p.Cor == Cor.Branca)
+                    if (p.Cor == Cor.Branca)
                     {
                         posP = new Posicao(destino.Linha + 1, destino.Coluna);
                     }
