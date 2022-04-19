@@ -30,11 +30,25 @@ namespace xadrez
         public void realizaJogada(Posicao origem, Posicao destino)
         {
             Peca pecaCapturada = executaMovimento(origem, destino);
+            Peca p = tab.peca(destino);
 
             if (estaEmCheque(jogadorAtual))
             {
                 desfazMovimento(origem, destino, pecaCapturada);
                 throw new TabuleiroException("Voce nao pode se colocar em xeque!");
+            }
+
+            // #jogadaespecial promocao
+            if (p is Peao)
+            {
+                if((p.Cor == Cor.Branca && destino.Linha == 0) || (p.Cor == Cor.Preta && destino.Linha == 7))
+                {
+                    p = tab.retirarPeca(destino);
+                    pecas.Remove(p);
+                    Peca rainha = new Rainha(tab, p.Cor);
+                    tab.colocarPeca(rainha, destino);
+                    pecas.Add(rainha);
+                }
             }
 
             if (estaEmCheque(adversaria(jogadorAtual)))
@@ -54,8 +68,6 @@ namespace xadrez
                 turno++;
                 mudaJogador();
             }
-
-            Peca p = tab.peca(destino);
 
             // #jogadaespecial en passant
 
