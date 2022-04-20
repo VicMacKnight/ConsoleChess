@@ -1,2 +1,2 @@
 # ConsoleChess
-Just a chess game made that runs on console
+Just a console chess game
